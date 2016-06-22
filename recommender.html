@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Papers recommender</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript"></script>  
+    <style>
+    form {
+        overflow: hidden;
+        font-family:"Comic Sans MS";
+        font-size: 25pt;
+        padding: 20px;
+     }
+     #searchby {
+        background-color: #FAEBD7;
+        width: 1500px;
+        padding: 20px;
+        border: 5px solid navy;
+        margin: 2px;
+        font-family:"Comic Sans MS";
+    }  
+    input {
+        font-family:"Comic Sans MS";
+        font-size: 20pt;
+    }
+    </style>
+  </head>
+  
+  <body>
+ 
+    <form action="/recommend" method="get">
+          <div id="searchby">
+          <label><strong>Search By Text Query:</strong>
+		  </label>
+		  <br>
+          <input type="text" name="query" style="width: 1500px;  height: 40px;" 
+          value="graphene"></input>
+		  <br>
+		  <label><strong>Quantity </strong><small>(max.500)</small>:</label>
+          <input type="number" name="quantity" min="1" max="500" 
+          style="width: 50px; height: 40px;" value="10"></input>
+          </div>
+          <br>
+		  <input type="submit" id="go" style="width: 100px; height: 70px;" 
+		  value="Go!"></input>
+    </form>
+   
+  </body>
+</html>
